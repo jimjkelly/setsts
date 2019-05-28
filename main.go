@@ -12,9 +12,9 @@ import (
 )
 
 func main() {
-	profile := flag.String("-profile", "default", "Name of the AWS profile to use.")
-	serial := flag.String("-serial-number", "", "The serial number of your MFA device.")
-	duration := flag.Int64("-duration-seconds", 43200, "The amount of time your generated STS token is valid for.")
+	profile := flag.String("profile", "default", "Name of the AWS profile to use.")
+	serial := flag.String("serial-number", "", "The serial number of your MFA device.")
+	duration := flag.Int64("duration-seconds", 43200, "The amount of time your generated STS token is valid for.")
 	flag.Parse()
 
 	code := flag.Arg(0)
